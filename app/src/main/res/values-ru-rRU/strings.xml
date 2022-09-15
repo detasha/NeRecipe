@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Рецепты</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удвлить</string>
+    <string name="home">На главную</string>
+    <string name="menu">Меню</string>
+    <string name="favorite">Избранное</string>
+    <string name="filter">Фильтр</string>
+    <string name="search">Поиск</string>
+    <string name="save">Сохранить</string>
+    <string name="category">Категории</string>
+    <string name="recipe">Рецепт</string>
+    <string name="title_content">Содержание заголовка</string>
+    <string name="add_recipe">Добавить рецепт</string>
+    <string name="empty_text">Здесь пока ничего нет</string>
+    <string name="recipe_menu">Меню</string>
+    <string name="recipe_favorite">Избранное</string>
+    <string name="filter_text">Фильтр</string>
+    <string name="recipe_options">Действия</string>
+    <string name="step_image">Изображение шагов рецепта</string>
+    <string name="step_text">Шаг №</string>
+    <string name="text_add_edit_step">Редактировать или добавить шаг</string>
+    <string name="step_contains">Текст рецепта</string>
+    <string name="add_image">Добавьте изображение</string>
+    <string name="empty_text_should_be_done">Пожалуйста добавьте свой первый рецепт</string>
+    <string-array name="category_list">
+        <item>Европейская</item>
+        <item>Азиатская</item>
+        <item>Паназиатская</item>
+        <item>Восточная</item>
+        <item>Американская</item>
+        <item>Русская</item>
+        <item>Средиземноморская</item>
+    </string-array>
+</resources>

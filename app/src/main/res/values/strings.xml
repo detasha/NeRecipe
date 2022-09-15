@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">NeRecipe</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="home">Home</string>
+    <string name="menu">Menu</string>
+    <string name="favorite">Favorite</string>
+    <string name="filter">Filter</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="category">Category</string>
+    <string name="recipe">Recipe</string>
+    <string name="title_content">Title</string>
+    <string name="add_recipe">Add recipe</string>
+    <string name="empty_text">There are nothing to show</string>
+    <string name="recipe_menu">Menu</string>
+    <string name="recipe_favorite">Favorite</string>
+    <string name="filter_text">Filter</string>
+    <string name="recipe_options">Options</string>
+    <string name="step_image">Image of the step</string>
+    <string name="step_text">Step №</string>
+    <string name="text_add_edit_step">Add or edit step</string>
+    <string name="step_contains">Step contains</string>
+    <string name="add_image">Add image</string>
+    <string name="empty_text_should_be_done">Please add the first recipe</string>
+        <string-array name="category_list">
+        <item>European</item>
+        <item>Asian</item>
+        <item>Pan-Asian</item>
+        <item>Eastern</item>
+        <item>American</item>
+        <item>Russian</item>
+        <item>Mediterranean</item>
+    </string-array>
+</resources>
