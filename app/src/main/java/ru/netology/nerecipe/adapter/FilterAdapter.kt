@@ -1,11 +1,18 @@
 package ru.netology.nerecipe.adapter
 
+import android.opengl.Visibility
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import ru.netology.nerecipe.R
+
 import ru.netology.nerecipe.databinding.FilterBinding
+
+
 
 internal class FiltersAdapter(
     private val interactionListener: FilterInteractionListener
@@ -29,11 +36,13 @@ internal class FiltersAdapter(
 
         private lateinit var category: String
 
+
         init {
             binding.checkboxCategoryFilter.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     listener.checkboxFilterPressedOn(category)
-                } else listener.checkboxFilterPressedOff(category)
+                } else
+                    listener.checkboxFilterPressedOff(category)
             }
         }
 

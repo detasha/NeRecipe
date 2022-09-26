@@ -23,13 +23,14 @@
     <string name="step_contains">Step contains</string>
     <string name="add_image">Add image</string>
     <string name="empty_text_should_be_done">Please add the first recipe</string>
-        <string-array name="category_list">
+    <string name="attention">Please chose at least one filter</string>
+    <string-array name="category_list">
+        <item>Russian</item>
         <item>European</item>
         <item>Asian</item>
         <item>Pan-Asian</item>
         <item>Eastern</item>
         <item>American</item>
-        <item>Russian</item>
         <item>Mediterranean</item>
     </string-array>
 </resources>

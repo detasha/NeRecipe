@@ -30,6 +30,19 @@
         tools:itemCount="7"
         tools:listitem="@layout/filter" />
 
+    <TextView
+        android:id="@+id/attentionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/attention"
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterRecycleView" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/selectFilter"
         android:layout_width="wrap_content"
@@ -39,6 +52,6 @@
         android:contentDescription="@string/add_recipe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_done_outline_24" />
+        app:srcCompat="@drawable/ic_baseline_check_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

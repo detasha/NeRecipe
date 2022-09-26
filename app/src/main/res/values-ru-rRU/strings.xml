@@ -24,13 +24,14 @@
     <string name="step_contains">Текст рецепта</string>
     <string name="add_image">Добавьте изображение</string>
     <string name="empty_text_should_be_done">Пожалуйста добавьте свой первый рецепт</string>
+    <string name="attention">Пожалуйста выберите хотя бы один фильтр</string>
     <string-array name="category_list">
+        <item>Русская</item>
         <item>Европейская</item>
         <item>Азиатская</item>
         <item>Паназиатская</item>
         <item>Восточная</item>
         <item>Американская</item>
-        <item>Русская</item>
         <item>Средиземноморская</item>
     </string-array>
 </resources>
