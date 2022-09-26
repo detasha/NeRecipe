@@ -1,9 +1,15 @@
 package ru.netology.nerecipe.viewModel
 
 import android.app.Application
+import android.icu.util.TimeUnit.values
+import android.opengl.Visibility
+import android.view.View
+import androidx.core.graphics.toColor
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
+import androidx.lifecycle.ViewModel
+import ru.netology.nerecipe.R
 import ru.netology.nerecipe.adapter.FilterInteractionListener
 import ru.netology.nerecipe.adapter.RecipeInteractionListener
 import ru.netology.nerecipe.adapter.StepInteractionListener
@@ -12,7 +18,9 @@ import ru.netology.nerecipe.data.impl.RecipeRepositoryImpl
 import ru.netology.nerecipe.db.AppDb
 import ru.netology.nerecipe.dto.Recipe
 import ru.netology.nerecipe.dto.Step
+import ru.netology.nerecipe.ui.FilterFragment
 import ru.netology.nerecipe.util.SingleLiveEvent
+import java.time.chrono.JapaneseEra.values
 import java.util.*
 
 class RecipeViewModel(
@@ -31,9 +39,10 @@ class RecipeViewModel(
     private val currentRecipe = MutableLiveData<Recipe?>(null)
     private val currentStep = MutableLiveData<Step?>(null)
 
+
     val currentImageStep = MutableLiveData<String>("")
 
-    private val filters = MutableLiveData<MutableSet<String>?>(mutableSetOf())
+    public val filters = MutableLiveData<MutableSet<String>?>(mutableSetOf())
     var filterResult = Transformations.switchMap(filters) { filter ->
         repository.getFilteredList(filter)
     }
@@ -43,6 +52,7 @@ class RecipeViewModel(
     val navigateToCurrentRecipeScreenEvent = SingleLiveEvent<Recipe>()
     val navigateToStepEditScreenEvent = SingleLiveEvent<Step>()
     val navigateToStepAddScreenEvent = SingleLiveEvent<String>()
+
 
     fun onSaveButtonClicked(category: String, title: String, content: List<Step>?) {
         val recipeForSave = currentRecipe.value?.copy(
@@ -166,8 +176,13 @@ class RecipeViewModel(
         filters.value = filterList
     }
 
+
     override fun getStatusCheckBox(category: String): Boolean {
+        if(filters.value.isNullOrEmpty()){
+             checkboxFilterPressedOn("Russian")
+        }
         return filters.value?.contains(category) == true
+
     }
 
     //endregion FilterInteractionListener

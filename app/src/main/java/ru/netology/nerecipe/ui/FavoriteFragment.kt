@@ -41,7 +41,6 @@ class FavoriteFragment : Fragment() {
         layoutInflater, container, false
     ).also { binding ->
 
-
         val recyclerViewAdapter = RecipeAdapter(viewModel)
 
         viewModel.data.observe(viewLifecycleOwner) { recipes ->

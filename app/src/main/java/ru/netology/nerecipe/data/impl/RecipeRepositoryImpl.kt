@@ -1,13 +1,19 @@
 package ru.netology.nerecipe.data.impl
 
+
+import android.widget.TextView
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.map
+import androidx.lifecycle.viewmodel.viewModelFactory
 import ru.netology.nerecipe.data.RecipeRepository
 import ru.netology.nerecipe.db.RecipeDao
 import ru.netology.nerecipe.db.toEntity
 import ru.netology.nerecipe.db.toRecipe
 import ru.netology.nerecipe.dto.Recipe
 import ru.netology.nerecipe.dto.Step
+import ru.netology.nerecipe.ui.FilterFragment
+
 
 class RecipeRepositoryImpl(
     private val dao: RecipeDao
@@ -18,6 +24,7 @@ class RecipeRepositoryImpl(
     override val data = dao.getAll().map { entities ->
         entities.map { it.toRecipe() }
     }
+
 
     override fun getNextIndexId(): Long {
         return nextIndexId++
@@ -58,16 +65,16 @@ class RecipeRepositoryImpl(
         )
     }
 
-    override fun getFilteredList(filters: MutableSet<String>?): LiveData<List<Recipe>> {
-        if (filters.isNullOrEmpty()) {
-            return data
-        }
-        val filteredRecipe = data.map { recipeList ->
-            val newRecipes = recipeList.filter {
-                it.category in filters
+       override fun getFilteredList(filters: MutableSet<String>?): LiveData<List<Recipe>> {
+        if (filters.isNullOrEmpty())
+          return data
+            val filteredRecipe = data.map { recipeList ->
+                val newRecipes = recipeList.filter {
+                    it.category in filters
+                }
+                newRecipes
             }
-            newRecipes
+            return filteredRecipe
         }
-        return filteredRecipe
     }
-}
+

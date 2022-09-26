@@ -127,8 +127,7 @@ class FeedFragment : Fragment() {
                 FeedFragmentDirections.toFilterFragment()
             findNavController().navigate(direction)
         }
-
-        return true
+         return true
     }
 
     override fun onCreateView(
